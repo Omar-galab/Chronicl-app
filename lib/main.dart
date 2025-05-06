@@ -1,8 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-void main() {
+void main()async {
   // Enable debug painting to show widget boundaries
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   debugPaintSizeEnabled = true;
   // Alternatively, you can use this to show baselines
   // debugPaintBaselinesEnabled = true;
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -123,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add ,size: 50,),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

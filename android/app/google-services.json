@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007620129206",
+    "project_id": "notex-90ae0",
+    "storage_bucket": "notex-90ae0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007620129206:android:4f1458a1a3a370f3564117",
+        "android_client_info": {
+          "package_name": "com.example.chronicle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh5Gr3Zh8FN_uWJ6kSSaIjtNOLAAuklYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
