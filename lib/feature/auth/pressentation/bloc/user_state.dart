@@ -1,4 +1,5 @@
 import 'package:chronicle/feature/auth/domain/modle/user_modle.dart';
+import 'package:equatable/equatable.dart';
 
 enum UserStatus{
   initial,
@@ -6,15 +7,15 @@ enum UserStatus{
   success,
   error,
 }
-class UserState {
+class UserState extends Equatable{
   final UserStatus status;
   final String? errorMessage;
   final UserModle? userModle;
 
-  UserState._({required this.status, this.errorMessage, this.userModle});
+  const UserState._({required this.status, this.errorMessage, this.userModle});
 
 
-  factory UserState.initial() => UserState._(status: UserStatus.initial);
+  factory UserState.initial() => const UserState._(status: UserStatus.initial);
   UserState  copyWith({UserStatus? status, UserModle? userModle, String? errorMessage}){
     return UserState._(
       status: status?? this.status,
@@ -23,5 +24,9 @@ class UserState {
     );
     
   }
+  
+  @override
+  // TODO: implement props
+  List<Object?> get props => [status,errorMessage ,UserModle];
 
 }
